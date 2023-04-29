@@ -1,0 +1,102 @@
+.contacts_section_h1 {
+    margin-bottom: 70px;
+
+    .h1_title {
+        max-width: 651px;
+        margin: 0 auto;
+    }
+
+    @media screen and (max-width: 640px) {
+        margin-bottom: 40px;
+    }
+}
+
+.contacts_section_map {
+    position: relative;
+
+
+    @media screen and (max-width: 640px) {
+        margin-bottom: 345px;
+    }
+
+    #yamap {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 400px;
+        z-index: 4;
+
+        @media screen and (max-width: 640px) {
+            top: 235px;
+        }
+    }
+
+    .container {
+        padding-top: 39px;
+        @media screen and (max-width: 640px) {
+            padding-top: 0;
+        }
+    }
+
+    .contact_box {
+        box-sizing: border-box;
+        max-width: 302px;
+        border-radius: 10px;
+        background-color: $white;
+        padding: 50px;
+        display: flex;
+        flex-direction: column;
+        z-index: 5;
+        position: relative;
+        margin-bottom: 21px;
+        box-shadow: 0px 0px 24.6403px rgba(0, 0, 0, 0.1);
+
+        @media screen and (max-width: 640px) {
+            margin: 0 auto;
+            padding: 30px 50px;
+        }
+        .btn_red {
+            font-weight: 400;
+            font-size: 11.5614px;
+            padding: 17px 0;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 170px;
+            height: 11px;
+            top: 0;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            border-radius: 0 0 10px 10px;
+            background-color: $accent;
+        }
+
+        .info_row {
+            display: flex;
+            flex-direction: row;
+            gap: 15px;
+            margin-bottom: 15px;
+
+            p {
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 140%;
+            }
+        }
+
+        .question {
+            font-weight: 700;
+            font-size: 14.7101px;
+            line-height: 140%;
+            margin-top: 15px;
+            margin-bottom: 14px;
+            @media screen and (max-width: 640px) {
+                margin-top: 2px;
+                text-align: center;
+            }
+        }
+    }
+}

@@ -1,0 +1,191 @@
+.item_section {
+    .breadcrumbs_main_box {
+        font-weight: 400;
+        font-size: 12px;
+        margin-bottom: 35px;
+        margin-top: 20px;
+        display: flex;
+        flex-direction: row;
+
+        a {
+            color: $dark;
+
+            &::after {
+                content: url("data:image/svg+xml,%3Csvg width='17' height='9' viewBox='0 0 17 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16.3536 4.85355C16.5488 4.65829 16.5488 4.34171 16.3536 4.14645L13.1716 0.964466C12.9763 0.769204 12.6597 0.769204 12.4645 0.964466C12.2692 1.15973 12.2692 1.47631 12.4645 1.67157L15.2929 4.5L12.4645 7.32843C12.2692 7.52369 12.2692 7.84027 12.4645 8.03553C12.6597 8.2308 12.9763 8.2308 13.1716 8.03553L16.3536 4.85355ZM0 5H16V4H0V5Z' fill='%23303030'/%3E%3C/svg%3E%0A");
+                margin: 0 14px;
+            }
+
+            &:last-child {
+                &::after {
+                    display: none;
+                }
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            margin: 20px 0;
+            font-size: 10px;
+
+            a {
+
+                &::after {
+                    content: url("data:image/svg+xml,%3Csvg width='17' height='9' viewBox='0 0 17 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16.3536 4.85355C16.5488 4.65829 16.5488 4.34171 16.3536 4.14645L13.1716 0.964466C12.9763 0.769204 12.6597 0.769204 12.4645 0.964466C12.2692 1.15973 12.2692 1.47631 12.4645 1.67157L15.2929 4.5L12.4645 7.32843C12.2692 7.52369 12.2692 7.84027 12.4645 8.03553C12.6597 8.2308 12.9763 8.2308 13.1716 8.03553L16.3536 4.85355ZM0 5H16V4H0V5Z' fill='%23303030'/%3E%3C/svg%3E%0A");
+                    margin: 0 10px;
+                }
+            }
+        }
+    }
+
+    .main_item_flex_box {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 20px;
+
+        @media screen and (max-width: 768px) {
+            flex-direction: column;
+        }
+
+        .photo_slider_box {
+            width: 50%;
+            position: sticky;
+            top: 79px;
+
+            @media screen and (max-width: 768px) {
+                width: 100%;
+                position: relative;
+                top: 0;
+            }
+
+            .itemMainSlider {
+                height: 384px;
+                margin-bottom: 10px;
+
+                @media screen and (max-width: 768px) {
+                    height: 230px;
+                }
+
+                .swiper-button-next,
+                .swiper-button-prev {
+                    --swiper-navigation-sides-offset: 2%;
+                }
+
+                .swiper-slide {
+                    img {
+                        height: 100%;
+                        width: 100%;
+                        object-fit: cover;
+                        border-radius: 5px;
+                        display: block;
+                        margin: 0 auto;
+                    }
+                }
+
+                .swiper-button-prev::after {
+                    content: url("data:image/svg+xml,%3Csvg width='38' height='38' viewBox='0 0 38 38' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='19' cy='19' r='19' transform='matrix(-1 0 0 1 38 0)' fill='%23F0F0F0'/%3E%3Cpath d='M22.7561 25.0811L16.8161 19.1411L22.7561 13.2011L20.9185 11.3765L13.1538 19.1411L20.9185 26.9058L22.7561 25.0811Z' fill='%23303030'/%3E%3C/svg%3E%0A");
+                }
+
+                .swiper-button-next::after {
+                    content: url("data:image/svg+xml,%3Csvg width='38' height='38' viewBox='0 0 38 38' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='19' cy='19' r='19' fill='%23F0F0F0'/%3E%3Cpath d='M15.2439 25.0811L21.1838 19.1411L15.2439 13.2011L17.0815 11.3765L24.8462 19.1411L17.0815 26.9058L15.2439 25.0811Z' fill='%23303030'/%3E%3C/svg%3E%0A");
+                }
+            }
+
+            .itemSecondSlider {
+                height: 77px;
+
+                @media screen and (max-width: 768px) {
+                    height: 50px;
+                }
+
+                .swiper-slide {
+                    opacity: .4;
+
+                    &.swiper-slide-thumb-active {
+                        opacity: 1;
+                    }
+
+                    img {
+                        height: 100%;
+                        width: 100%;
+                        object-fit: cover;
+                        border-radius: 5px;
+                        display: block;
+                        margin: 0 auto;
+                        max-width: 106px;
+                    }
+                }
+            }
+        }
+
+        .item_info_main_box {
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+
+            @media screen and (max-width: 768px) {
+                width: 100%;
+            }
+
+            .h3_item_name {
+                font-weight: 700;
+                margin-bottom: 9px;
+                font-size: 26px;
+
+                @media screen and (max-width: 768px) {
+                    font-size: 20px;
+                }
+            }
+
+            .article {
+                font-weight: 400;
+                font-size: 12px;
+                color: #505050;
+                margin-bottom: 37px;
+
+                @media screen and (max-width: 768px) {
+                    margin-bottom: 11px;
+                }
+            }
+
+            .price {
+                font-weight: 700;
+                font-size: 22px;
+                line-height: 140%;
+                margin-bottom: 19px;
+
+                @media screen and (max-width: 768px) {
+                    font-size: 18px;
+                    margin-bottom: 24px;
+                }
+            }
+
+            .btn_red {
+                margin: 0;
+                margin-bottom: 30px;
+
+                @media screen and (max-width: 768px) {
+                    font-size: 16px;
+                    padding: 23px 36px;
+                    margin-bottom: 23px;
+                }
+            }
+
+            .item_text_description {
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 160%;
+                color: #303030;
+
+                ol,
+                ul {
+                    padding-left: 4%;
+                }
+
+                p {
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+}

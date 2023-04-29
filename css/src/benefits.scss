@@ -1,0 +1,159 @@
+.section_benefits {
+    background: url('/img/benef_bg.jpg') center center no-repeat;
+    padding: 64px 0;
+    position: relative;
+    background-size: cover;
+    margin-bottom: 75px;
+
+    @media screen and (max-width: 768px) {
+        padding: 0 0 350px;
+        background-size: 132%;
+        background-position-y: bottom;
+        @media screen and (max-width: 550px) {
+            background-size: 253%;
+        }
+    }
+
+
+
+    .image_box {
+        position: absolute;
+        bottom: -162px;
+        right: 17%;
+        width: 474px;
+        height: 869px;
+        z-index: 1;
+
+        @media screen and (max-width: 1080px) {
+            width: 323px;
+            height: 593px;
+
+            @media screen and (max-width: 840px) {
+                right: 4%;
+
+                @media screen and (max-width: 768px) {
+                    width: 224.03px;
+                    height: 411.1px;
+                    bottom: -446px;
+                    right: unset;
+                }
+
+            }
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .img_info {
+            position: absolute;
+            bottom: 100px;
+            right: -29px;
+            background: #FFFFFF;
+            box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.08);
+            border-radius: 5px;
+            padding: 18px 25px;
+
+            @media screen and (max-width: 768px) {
+                bottom: 49px;
+                right: 8px;
+            }
+
+
+            p {
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 140%;
+                color: #6C6C6C;
+
+                b {
+                    font-weight: 700;
+                    font-size: 14px;
+                    line-height: 140%;
+                    color: $dark;
+                }
+            }
+        }
+    }
+
+    .decoration_scroll {
+        position: relative;
+        bottom: -100px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        display: block;
+        width: fit-content;
+        z-index: 5;
+
+        @media screen and (max-width: 768px) {
+            bottom: -397px;
+        }
+
+    }
+
+    .decoration.main_bottom {
+        bottom: 0;
+        width: 100%;
+        z-index: 3;
+    }
+
+    .h1_title {
+        text-align: left;
+        max-width: 597px;
+        margin-bottom: 45px;
+        z-index: 2;
+        position: relative;
+
+        @media screen and (max-width: 768px) {
+            text-align: center;
+            max-width: unset;
+            margin-bottom: 40px;
+        }
+    }
+
+    .main_flex_box {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 30px;
+        z-index: 2;
+        position: relative;
+
+        @media screen and (max-width: 768px) {
+            max-width: 400px;
+        }
+
+        .cell {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 23px 32px;
+            gap: 15px;
+
+            max-width: min-content;
+            background: $white;
+            box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.08);
+            border-radius: 5px;
+
+            @media screen and (max-width: 768px) {
+                max-width: 100%;
+                font-size: 14px;
+                padding: 16px 30px;
+            }
+        }
+    }
+
+    .btn_red {
+        margin: 0;
+        z-index: 2;
+        position: relative;
+
+        @media screen and (max-width: 768px) {
+            max-width: 400px;
+        }
+
+    }
+}

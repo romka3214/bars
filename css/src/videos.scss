@@ -1,0 +1,35 @@
+.videos_section {
+    .main_flex_box {
+        margin-top: 70px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 40px;
+        .cell {
+            width: calc(50% - 22px);
+            position: relative;
+            padding-bottom: 25%;
+            padding-top: 25px;
+            height: 0;
+
+            iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+    @media screen and (max-width: 768px) {
+        .main_flex_box{
+            margin-top: 40px;
+            gap: 20px;
+            .cell{
+                width: 100%;
+                padding-bottom:56.25%;
+            }
+        }
+    }
+}

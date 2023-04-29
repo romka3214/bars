@@ -1,0 +1,168 @@
+.section_phone_row {
+
+    margin-bottom: 30px;
+
+
+    &.section_rent_row{
+        margin-bottom: 80px;
+        .main_box{
+            color: $white;
+            background: url('/img/image\ 8\ \(1\).jpg') center center no-repeat;
+            padding: 49px 0 43px 70px;
+            &::after {
+                background-color: $white;
+            }
+            .decor_photo{
+                max-width: 418px;
+                right: -93px;
+            }
+            .h1_title {
+                max-width: 400px;
+                color: $white;
+                span{
+                    color: $white;
+                }
+            }
+            .lead_btn_box {
+                gap: 0px;
+                max-width: 288px;
+                width: 100%;
+                .text-row{
+                    margin-bottom: 14px;
+                }
+                .btn_red{
+                    margin-top: 3px;
+                }
+            }
+            @media screen and (max-width: 1210px) {
+                background-size: cover;
+                padding: 30px;
+                padding-bottom: 0;
+                &::after {
+                    display: none;
+                }
+                .lead_btn_box{
+                    align-items: center;
+                }
+                .decor_photo{
+                    right: 6px;
+                    height: 229px;
+                    img{
+                        position: absolute;
+                        bottom: -15px;
+                    }
+                }
+            }
+        }
+    }
+    &.section_credit_row{
+        margin-bottom: 80px;
+        .main_box{
+            .decor_photo{
+                right: -82px;
+            }
+        }
+    }
+
+    .main_box {
+        background: #F4F4F4;
+        display: flex;
+        flex-direction: row;
+        gap: 55px;
+        align-items: center;
+        padding: 60px 0 60px 70px;
+        border-radius: 10px;
+        position: relative;
+
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto 0;
+            width: 11px;
+            height: 134px;
+            border-radius: 0px 10px 10px 0px;
+            background-color: $accent;
+        }
+
+        .h1_title {
+            text-align: left;
+            max-width: 470px;
+        }
+
+        .lead_btn_box {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            .text-row {
+                display: flex;
+                flex-direction: row;
+                gap: 15px;
+                p {
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 140%;
+                }
+            }
+        }
+
+        .decor_photo {
+            position: absolute;
+            right: -138px;
+            top: 0;
+            bottom: 0;
+            margin: auto 0;
+            max-width: 339px;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    @media screen and (max-width: 1210px) {
+        &.section_credit_row{
+            margin-bottom: 50px;
+            .main_box{
+                .decor_photo{
+                    right: unset;
+                }
+            }
+        }
+        margin-bottom: 30px;
+        .main_box{
+            flex-direction: column;
+            gap: 17px;
+            padding: 30px;
+            .h1_title{
+                text-align: center;
+            }
+            .lead_btn_box{
+                gap: 25px;
+                .text-row{
+                    p{
+                        font-size: 14px;
+                    }
+                }
+            }
+            .decor_photo{
+                position: relative;
+                width: 100%;
+                right: unset;
+            }
+            &::after{
+                top: 0;
+                bottom: unset;
+                left: 0;
+                right: 0;
+                margin: 0 auto;
+                height: 11px;
+                width: 134px;
+                border-radius: 0px 0px 10px 10px;
+            }
+        }
+    }
+}

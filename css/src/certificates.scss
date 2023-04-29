@@ -1,0 +1,82 @@
+.certificates_section {
+    margin-bottom: 44px;
+    @media screen and (max-width: 768px){
+        margin-bottom: 50px;
+    }
+    .slider_selector_main_box{
+        @media screen and (max-width: 768px){
+            margin-bottom: 0;
+        }
+    }
+
+    .h1_title {
+        max-width: 765px;
+        font-style: italic;
+        margin: 0 auto;
+        margin-bottom: 40px;
+    }
+
+    .swiper_with_tabs_four {
+        overflow: hidden;
+
+        .swiper-pagination {
+            position: static;
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+        .swiper-button-next, .swiper-button-prev{
+            top: calc(50% + 66px);
+            --swiper-navigation-sides-offset: -6%;
+            @media screen and (max-width: 768px){
+                --swiper-navigation-sides-offset: -2%;
+            }
+        }
+
+        .swiper-wrapper {
+            .swiper-slide {
+                position: relative;
+                &:not(.swiper-slide-active) {
+                    opacity: 1;
+                }
+                &:hover{
+                    &::after{
+                        content: url("data:image/svg+xml,%3Csvg width='135' height='135' viewBox='0 0 135 135' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg filter='url(%23filter0_d_633_756)'%3E%3Ccircle cx='67.5' cy='67.5' r='51.5' fill='white'/%3E%3C/g%3E%3Cpath d='M84.9335 88.7416L84.9348 88.743C85.6733 89.4815 86.8712 89.4815 87.6097 88.743L87.6099 88.7427C88.3474 88.0043 88.3472 86.808 87.6106 86.0692C87.6105 86.0691 87.6104 86.069 87.6102 86.0688L75.8561 74.2428C77.9947 71.4876 79.2705 68.0275 79.2705 64.269C79.2705 55.2771 71.981 47.9877 62.9892 47.9877C53.9974 47.9877 46.7079 55.2771 46.7079 64.269C46.7079 73.2608 53.9974 80.5503 62.9892 80.5503C66.8591 80.5503 70.4126 79.1962 73.2061 76.9405L84.9335 88.7416ZM62.9892 76.7888C56.0748 76.7888 50.4694 71.1833 50.4694 64.269C50.4694 57.3546 56.0748 51.7492 62.9892 51.7492C69.9035 51.7492 75.509 57.3546 75.509 64.269C75.509 71.1833 69.9035 76.7888 62.9892 76.7888Z' fill='%23DF4343' stroke='%23DF4343' stroke-width='1.2795'/%3E%3Cdefs%3E%3Cfilter id='filter0_d_633_756' x='0.00621128' y='0.00621128' width='134.988' height='134.988' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeColorMatrix in='SourceAlpha' type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0' result='hardAlpha'/%3E%3CfeOffset/%3E%3CfeGaussianBlur stdDeviation='7.99689'/%3E%3CfeComposite in2='hardAlpha' operator='out'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0'/%3E%3CfeBlend mode='normal' in2='BackgroundImageFix' result='effect1_dropShadow_633_756'/%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='effect1_dropShadow_633_756' result='shape'/%3E%3C/filter%3E%3C/defs%3E%3C/svg%3E%0A");
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        height: 100%;
+                        width: 100%;
+                        position: absolute;
+                        top: 0;
+                    }
+                }
+
+                img {
+                    display: block;
+                    margin: 0 auto;
+                    width: 100%;
+                    object-fit: cover;
+                    max-width: 965px;
+                    max-height: 567px;
+                    filter: drop-shadow(0px 0px 8px rgba(0, 0, 0, 0.1));
+                    margin-bottom: 15px;
+                    @media screen and (max-width: 768px){
+                        margin-bottom: 12px;
+                        max-height: unset;
+                        max-width: unset;
+                    }
+                }
+
+                p {
+                    font-weight: 400;
+                    font-size: 14px;
+                    color: $dark;
+                    @media screen and (max-width: 768px){
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}

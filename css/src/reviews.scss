@@ -1,0 +1,34 @@
+.reviews_section {
+
+    margin-bottom: 40px;
+    .swiper_with_tabs {
+        width: 59%;
+        margin: 0 auto;
+
+        --swiper-navigation-sides-offset: 23%;
+        @media screen and (max-width: 768px) {
+            --swiper-navigation-sides-offset: 0%;
+            --swiper-navigation-top-offset: calc(50% + 43px);
+        }
+        .swiper-wrapper {
+            .swiper-slide {
+                img {
+                    max-width: 280px;
+                    max-height: 568px;
+
+                }
+            }
+        }
+    }
+
+    .h1_title {
+        max-width: 1010px;
+        margin: 0 auto;
+        margin-bottom: 30px;
+        font-style: italic;
+
+        @media screen and (max-width: 768px) {
+            margin-bottom: 5px;
+        }
+    }
+}

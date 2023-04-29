@@ -1,0 +1,51 @@
+section#page_404 {
+    background: url('/img/404.jpg') center center no-repeat;
+    height: 100vh;
+
+    .flex-center {
+        height: 100%;
+        width: 100%;
+        position: relative;
+
+        .main_box_404 {
+            background-color: $white;
+            padding: 30px 33px;
+            max-width: 336px;
+            border-radius: 25px;
+            bottom: 16%;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            position: absolute;
+            box-sizing: border-box;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+
+            p {
+                color: $dark;
+                font-weight: 400;
+                font-size: 18.1653px;
+                line-height: 140%;
+                text-align: center;
+                margin-bottom: 27px;
+            }
+
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        background-size: 134%;
+        background-position-y: 10%;
+        position: relative;
+
+        &::before {
+            content: '';
+            height: 100%;
+            width: 100%;
+            z-index: 0;
+            position: absolute;
+            background: linear-gradient(0deg, rgb(255 255 255) 0%, rgb(255 255 255) calc(-100vw + 105%), rgba(255, 255, 255, 0) 65%), rgba(255, 255, 255, 0) 100%;
+            left: 0;
+            top: 0;
+        }
+    }
+}

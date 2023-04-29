@@ -1,0 +1,85 @@
+.individual_photo_section {
+    margin-bottom: 90px;
+    @media screen and (max-width: 768px){
+        margin-bottom: 50px;
+    }
+    .h1_title {
+        max-width: 735px;
+        margin: 0 auto;
+        margin-bottom: 30px;
+        @media screen and (max-width: 768px){
+            margin-bottom: 5px;
+        }
+    }
+
+    .swiper_with_tabs{
+        overflow: visible;
+        .swiper-button-next, .swiper-button-prev{
+            top: calc(50% + 56px);
+            @media screen and (max-width: 768px){
+                --swiper-navigation-sides-offset: -2%;
+            }
+        }
+    }
+}
+
+.slider_selector_main_box {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 34px;
+
+    .selector_cell {
+        padding: 11px 34px;
+        border-bottom: 2px solid #DFDFDF;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 140%;
+        @media screen and (max-width: 768px) {
+            font-size: 14px;
+            padding: 10px 18px;
+        }
+        cursor: pointer;
+
+        &.active {
+            border-bottom: 2px solid #DF4343;
+        }
+    }
+}
+
+.swiper_with_tabs,.swiper_with_tabs_four,.swiper_default {
+    display: none;
+    &.active{
+        display: block;
+    }
+    
+
+    .swiper-button-prev::after {
+        content: url("data:image/svg+xml,%3Csvg width='54' height='54' viewBox='0 0 54 54' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='27' cy='27' r='27' transform='matrix(-1 0 0 1 54 0)' fill='%23F0F0F0'/%3E%3Cpath d='M32.3379 35.6418L23.8969 27.2008L32.3379 18.7598L29.7265 16.1668L18.6925 27.2008L29.7265 38.2348L32.3379 35.6418Z' fill='%23303030'/%3E%3C/svg%3E%0A");
+    }
+
+    .swiper-button-next::after {
+        content: url("data:image/svg+xml,%3Csvg width='54' height='54' viewBox='0 0 54 54' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='27' cy='27' r='27' fill='%23F0F0F0'/%3E%3Cpath d='M21.6621 35.6418L30.1031 27.2008L21.6621 18.7598L24.2735 16.1668L35.3075 27.2008L24.2735 38.2348L21.6621 35.6418Z' fill='%23303030'/%3E%3C/svg%3E");
+    }
+    .swiper-pagination{
+        position: static;
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+    }
+    .swiper-wrapper {
+        .swiper-slide {
+            &:not(.swiper-slide-active){
+                opacity: .3;
+            }
+            img {
+                display: block;
+                margin: 0 auto;
+                width: 100%;
+                object-fit: cover;
+                max-width: 965px;
+                max-height: 567px;
+            }
+        }
+    }
+}

@@ -1,0 +1,99 @@
+.social_section {
+    padding: 55px 0;
+
+    .main_flex_box {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 50px;
+
+        .photo_box {
+            img {
+                width: 100%;
+            }
+        }
+
+        .text_box {
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+            max-width: 454px;
+
+            .h1_title {
+                text-align: left;
+
+            }
+
+            .social_btns {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+
+                .row {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    gap: 28px;
+
+                    .btn_red {
+                        background: none;
+                        border: 1px solid $accent;
+                        color: $dark;
+                        max-width: 186px;
+                        gap: 15px;
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 935px) {
+        .main_flex_box {
+            flex-direction: column;
+            gap: 30px;
+            align-items: center;
+
+            .photo_box{
+                max-width: 600px;
+            }
+            .text_box {
+                gap: 40px;
+                max-width: unset;
+
+                .h1_title {
+                    text-align: center;
+                    max-width: 288px;
+                    margin: 0 auto;
+                }
+
+                .social_btns {
+                    flex-direction: row;
+                    gap: 10px;
+
+                    .row {
+                        display: flex;
+                        flex-direction: column-reverse;
+                        align-items: center;
+                        gap: 12px;
+
+                        .text {
+                            text-align: center;
+                            font-size: 12px;
+                            line-height: 140%;
+                        }
+
+                        .btn_red {
+                            background: none;
+                            border: 1px solid $accent;
+                            color: $dark;
+                            max-width: 186px;
+                            gap: 12px;
+                            padding: 23px 0;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}

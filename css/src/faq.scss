@@ -1,0 +1,90 @@
+.faq {
+    .h1_title {
+        margin-bottom: 70px;
+        @media screen and (max-width: 768px) {
+            margin-bottom: 40px;
+        }
+    }
+
+
+
+    .acordion_main_box {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        .acordion_row {
+            border-bottom: 1px solid #B7B7B7;
+            margin-bottom: 20px;
+
+            .acordion_header {
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 130%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0 0 20px 0;
+
+                transition: all .5s ease-in-out;
+                cursor: pointer;
+                @media screen and (max-width: 768px) {
+                    font-size: 18px;
+                }
+               
+
+                &::after {
+                    content: url("data:image/svg+xml,%3Csvg width='44' height='44' viewBox='0 0 44 44' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='22' cy='22' r='22' fill='%23DF4343'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M26.9443 27.7645C27.0202 27.8407 27.1105 27.9011 27.2098 27.9424C27.3091 27.9837 27.4155 28.005 27.523 28.0051C27.6306 28.0051 27.737 27.984 27.8364 27.9428C27.9357 27.9017 28.026 27.8413 28.1021 27.7652C28.1782 27.6891 28.2385 27.5987 28.2798 27.4992C28.321 27.3997 28.3422 27.2931 28.3423 27.1853C28.3423 27.0776 28.3212 26.971 28.2801 26.8714C28.2391 26.7719 28.1788 26.6814 28.1028 26.6052L23.1654 21.6588L28.1028 16.7138C28.2565 16.5599 28.3428 16.3511 28.3428 16.1335C28.3428 15.9158 28.2565 15.707 28.1028 15.5531C27.9492 15.3992 27.7408 15.3127 27.5235 15.3127C27.3063 15.3127 27.0979 15.3992 26.9443 15.5531L22.0083 20.4995L17.0722 15.5531C16.9962 15.4769 16.9059 15.4165 16.8065 15.3752C16.7071 15.334 16.6005 15.3127 16.493 15.3127C16.3854 15.3127 16.2789 15.334 16.1795 15.3752C16.0801 15.4165 15.9898 15.4769 15.9137 15.5531C15.76 15.707 15.6737 15.9158 15.6737 16.1335C15.6737 16.2412 15.6949 16.348 15.7361 16.4475C15.7773 16.5471 15.8376 16.6376 15.9137 16.7138L20.8511 21.6588L15.9137 26.6052C15.7602 26.7591 15.6741 26.9678 15.6742 27.1853C15.6744 27.4029 15.7608 27.6114 15.9144 27.7652C16.068 27.9189 16.2763 28.0052 16.4935 28.0051C16.7106 28.0049 16.9188 27.9184 17.0722 27.7645L22.0083 22.818L26.9443 27.7645Z' fill='white'/%3E%3C/svg%3E%0A");
+                    display: block;
+                    height: 44px;
+                    width: 44px;
+                    transition: all .1s ease;
+                    @media screen and (max-width: 768px) {
+                        transform: scale(0.8);
+                    }
+                }
+
+                &.closed {
+                    &::after {
+                        transform: rotate(45deg);
+                        @media screen and (max-width: 768px) {
+                            transform: rotate(45deg) scale(0.8);
+                        }
+                    }
+                }
+            }
+
+            .acordion_body {
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 130%;
+
+                padding-bottom: 25px;
+                transition: all .5s ease;
+                max-height: 330px;
+
+                overflow: hidden;
+                @media screen and (max-width: 768px) {
+                    font-size: 14px;
+                    padding-bottom: 15px;
+                }
+
+                ul {
+                    margin-left: 2%;
+                    @media screen and (max-width: 768px) {
+                        margin-left: 5%;
+                    }
+                }
+
+                &.closed {
+                    padding: 0;
+                    visibility: hidden;
+                    max-height: 0;
+                    transition: all .5s ease;
+
+                }
+            }
+        }
+    }
+}

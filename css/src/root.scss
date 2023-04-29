@@ -1,0 +1,255 @@
+@charset "UTF-8";
+
+// основные цвета
+$white: #fff;
+
+$dark: #303030;
+$dark_hover: #585858;
+
+$accent: #DF4343;
+$accent_hover: #F05B5B;
+
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: $dark;
+
+  &.overflow {
+    overflow-x: hidden;
+  }
+}
+
+html.lock {
+  overflow: hidden;
+}
+
+.header_section_margin {
+  margin-top: 79px;
+
+  @media screen and (max-width: 1210px) {
+    margin-top: 59px;
+  }
+
+}
+
+img {
+  pointer-events: none;
+}
+
+.decoration {
+  position: absolute;
+}
+
+.container {
+  height: 100%;
+  margin: 0 auto;
+  max-width: 1159px;
+  position: relative;
+
+  @media screen and (max-width: 1280px) {
+    margin: 0 3%;
+    max-width: unset;
+  }
+
+  @media screen and (max-width: 768px) {
+    margin: 0 5%;
+  }
+}
+
+.section_mb {
+  margin-bottom: 80px;
+
+  @media screen and (max-width: 1210px) {
+    margin-bottom: 50px;
+  }
+}
+
+.h1_title {
+  font-size: 42px;
+  text-align: center;
+  color: $dark;
+
+  span {
+    font-style: italic;
+    font-weight: 700;
+    color: $accent;
+  }
+
+  @media screen and (max-width: 768px) {
+    font-size: 20px;
+  }
+}
+
+.btn_red {
+  background: $accent;
+  cursor: pointer;
+  transition: all ease-out 0.2s;
+  border: none;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 15.3714px;
+  line-height: 140%;
+  color: $white;
+  text-decoration: none;
+
+  padding: 23px 0;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 327px;
+  border-radius: 100px;
+
+  &.small {
+    padding: 9px 0;
+    max-width: 120px;
+    font-size: 12px;
+    margin: 0;
+    margin-top: 12px;
+  }
+
+
+  &.btn_red_arrow {
+    p {
+      &::after {
+        content: url("data:image/svg+xml,%3Csvg width='27' height='10' viewBox='0 0 27 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M26.3882 5.38819C26.6026 5.1738 26.6026 4.8262 26.3882 4.61181L22.8945 1.11813C22.6801 0.903738 22.3325 0.903738 22.1181 1.11813C21.9037 1.33252 21.9037 1.68011 22.1181 1.8945L25.2236 5L22.1181 8.1055C21.9037 8.31989 21.9037 8.66748 22.1181 8.88187C22.3325 9.09626 22.6801 9.09626 22.8945 8.88187L26.3882 5.38819ZM0 5.54898H26V4.45102H0V5.54898Z' fill='white'/%3E%3C/svg%3E%0A");
+        display: inline-block;
+        margin-left: 20px;
+      }
+    }
+  }
+
+  &:hover {
+    background-color: $accent_hover;
+    // box-shadow: 0px 3px 8px  $dark;
+  }
+
+  @media screen and (max-width: 768px) {
+    font-size: 15.3714px;
+    max-width: unset;
+  }
+}
+
+.input {
+  position: relative;
+  display: inline-block;
+  font-family: 'Montserrat', sans-serif;
+  border: none;
+  outline: 1px solid #B7B7B7;
+  border-radius: 10px;
+  color: $dark;
+  width: 100%;
+  box-sizing: border-box;
+  cursor: text;
+  padding: 16px 30px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+
+  &::placeholder {
+    color: #B7B7B7;
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 13px 22px;
+  }
+}
+
+
+a {
+  text-decoration: none;
+}
+
+.right_side_social_buttons {
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto auto;
+  height: 138px;
+  width: 48px;
+  z-index: 11;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  background-color: $accent_hover;
+  border-radius: 5px 0px 0px 5px;
+
+  a {
+    width: 48px;
+    height: 45px;
+    background-color: $accent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px 0px 0px 5px;
+
+    &:hover {
+      background-color: $accent_hover
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .fancybox__container {
+    width: 100vw;
+    height: 100vh;
+  }
+}
+
+.fix-back {
+  .name {
+    font-weight: 700;
+    font-size: 14px;
+    font-style: italic;
+    margin-bottom: 1px;
+  }
+
+  .article {
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 140%;
+    margin-bottom: 15px;
+  }
+}
+
+@import "header.scss";
+@import "main.scss";
+@import "carts_row_section.scss";
+@import "videos.scss";
+
+@import "benefits.scss";
+@import "phone_row.scss";
+@import "contacts.scss";
+@import "individual_photo.scss";
+@import "reviews.scss";
+@import "catalog.scss";
+@import "item.scss";
+@import "certificates.scss";
+@import "stuff.scss";
+@import "social.scss";
+@import "faq.scss";
+@import "action.scss";
+
+@import "footer.scss";
+@import "404.scss";

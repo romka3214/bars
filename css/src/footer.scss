@@ -1,0 +1,166 @@
+footer {
+    padding: 33px 0 42px;
+    background-color: $white;
+    width: 100%;
+
+    .flex_box {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        .logo_box {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 25px;
+
+            .decor_line {
+                display: block;
+                background-color: #D6D6D6;
+                width: 1px;
+                height: 19px;
+            }
+
+            .logo_desc {
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 140%;
+                color: $dark;
+                max-width: 206px;
+            }
+
+            .logo {
+                font-style: italic;
+                font-weight: 800;
+                font-size: 42px;
+                color: $accent;
+            }
+        }
+
+
+        .social_link-box {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+
+            .social_buttons {
+                display: flex;
+                flex-direction: row;
+                gap: 3px;
+
+                a {
+
+                    svg {
+                        rect {
+                            fill: $accent;
+
+                            &:hover {
+                                fill: $accent_hover;
+                            }
+                        }
+
+                    }
+
+                }
+            }
+
+            .phone_lead-box {
+                display: flex;
+                flex-direction: column;
+                align-items: end;
+
+                .phone_number {
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 21.2701px;
+                    line-height: 130%;
+                    color: $dark;
+                }
+
+                .callback_link {
+                    color: $accent;
+                    font-weight: 400;
+                    font-size: 11px;
+                    line-height: 130%;
+                    text-decoration-line: underline;
+
+                    cursor: pointer;
+
+                    &:hover {
+                        text-decoration: none;
+                        color: $accent_hover;
+                    }
+                }
+            }
+        }
+    }
+
+    .flex_box-second {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 20px;
+
+        a {
+            text-decoration: none;
+            color: $dark;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 140%;
+
+            &:hover {
+                text-decoration: underline;
+                color: $dark_hover;
+            }
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        padding: 40px 0 49px;
+
+        .flex_box {
+            flex-direction: column;
+            justify-content: center;
+
+            .logo_box {
+                margin-bottom: 36px;
+                flex-direction: column;
+                justify-content: center;
+                gap: 10px;
+
+                .decor_line {
+                    width: 60px;
+                    height: 1px;
+                }
+
+                .logo_desc {
+                    text-align: center;
+                }
+            }
+
+            .social_link-box {
+                flex-direction: column;
+                gap: 13px;
+
+                .social_buttons {
+                    gap: 10px;
+                }
+
+                .phone_lead-box {
+                    gap: 5px;
+                    align-items: center;
+                }
+            }
+        }
+
+        .flex_box-second {
+            margin-top: 30px;
+            flex-direction: column;
+            gap: 10px;
+            align-items: center;
+        }
+    }
+}
