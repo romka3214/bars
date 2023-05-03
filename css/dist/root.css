@@ -225,6 +225,8 @@ header .flex_box .logo a {
   font-size: 42px;
   line-height: 140%;
   color: #DF4343;
+  display: flex;
+  align-items: center;
 }
 header .flex_box .links_box {
   display: flex;
@@ -303,6 +305,8 @@ header#mobile .header_body .logo a {
   font-weight: 800;
   font-size: 32px;
   color: #DF4343;
+  display: flex;
+  align-items: center;
 }
 header#mobile .header_body .burger_main_box {
   display: flex;
@@ -2188,6 +2192,8 @@ footer .flex_box .logo_box .logo {
   font-weight: 800;
   font-size: 42px;
   color: #DF4343;
+  display: flex;
+  align-items: center;
 }
 footer .flex_box .social_link-box {
   display: flex;
